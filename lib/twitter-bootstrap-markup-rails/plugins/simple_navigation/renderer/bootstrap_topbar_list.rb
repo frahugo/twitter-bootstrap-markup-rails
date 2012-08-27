@@ -42,7 +42,7 @@ class SimpleNavigation::Renderer::BootstrapTopbarList < SimpleNavigation::Render
       content_tag('span', item.name, link_options_for(item).except(:method))
     else
       name = item.name
-      name += content_tag(:span, '', :class => 'caret') if include_sub_navigation?(item)
+      name += content_tag(:b, '', :class => 'caret') if include_sub_navigation?(item)
       link_to(name, item.url, link_options_for(item))
     end
   end
